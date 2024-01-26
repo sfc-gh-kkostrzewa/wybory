@@ -308,7 +308,7 @@ with st.sidebar:
     st.title('Wybory do sejmu')
     year = st.radio(
         "Rok",
-        ("2019", '2015')
+        ("2023", "2019", '2015')
     )
 
     df = load_data(year)
