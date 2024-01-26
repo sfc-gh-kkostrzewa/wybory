@@ -316,7 +316,7 @@ with st.sidebar:
 
     view = st.radio(
         "Wyniki",
-        ("Wyniki ogólne", "Zwycięzcy w okręgach", "Partie w okręgach", 'Frekwencja')
+        ("Wyniki ogólne", "Zwycięzcy w okręgach", "Partie w okręgach", 'Frekwencja', 'Info')
     )
 
 if view == 'Wyniki ogólne':
@@ -345,3 +345,9 @@ elif view == 'Frekwencja':
         st.title('Frekwencja w okręgach')
     attendance(df)
     get_attendance_legend()
+
+elif view == 'Info':
+    with c1:
+        st.title('Źródła')
+        st.write("Dane: https://pkw.gov.pl/ ")
+        st.write("Mapa: https://pl.wikipedia.org/wiki/Okr%C4%99g_wyborczy_nr_2_do_Sejmu_Rzeczypospolitej_Polskiej")
